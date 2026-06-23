@@ -1,6 +1,6 @@
 # 🚀 ReactJS Interview Questions & Projects
-
-A complete collection of **React JS Interview Questions, Concepts, and Hands-on Projects** for beginners and intermediate developers.
+![Banner](./assets/banner.png)
+# A complete collection of **React JS Interview Questions, Concepts, and Hands-on Projects** for beginners and intermediate developers.
 
 This repository contains practical React examples, mini-projects, and commonly asked interview topics.
 
