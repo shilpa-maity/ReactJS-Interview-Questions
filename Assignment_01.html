@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Purpose Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Multi-Purpose Calculator</h2>
+        
+        <!-- Currency Converter -->
+        <div class="mb-4">
+            <h4>Currency Converter (USD & INR)</h4>
+            <input type="number" id="currencyInput" class="form-control" placeholder="Enter Amount">
+            <select id="currencyType" class="form-control my-2">
+                <option value="USD">USD to INR</option>
+                <option value="INR">INR to USD</option>
+            </select>
+            <button class="btn btn-primary" onclick="convertCurrency()">Convert</button>
+            <p id="currencyResult"></p>
+        </div>
+        
+        <!-- Temperature Converter -->
+        <div class="mb-4">
+            <h4>Temperature Converter (Celsius & Fahrenheit)</h4>
+            <input type="number" id="tempInput" class="form-control" placeholder="Enter Temperature">
+            <select id="tempType" class="form-control my-2">
+                <option value="C">Celsius to Fahrenheit</option>
+                <option value="F">Fahrenheit to Celsius</option>
+            </select>
+            <button class="btn btn-primary" onclick="convertTemperature()">Convert</button>
+            <p id="tempResult"></p>
+        </div>
+        
+        <!-- Interest Calculator -->
+        <div class="mb-4">
+            <h4>Interest Calculator</h4>
+            <input type="number" id="principal" class="form-control" placeholder="Principal Amount">
+            <input type="number" id="time" class="form-control my-2" placeholder="Time (years)">
+            <input type="number" id="rate" class="form-control my-2" placeholder="Rate of Interest">
+            <button class="btn btn-primary" onclick="calculateInterest()">Calculate</button>
+            <p id="interestResult"></p>
+        </div>
+        
+        <!-- Grade Calculator -->
+        <div class="mb-4">
+            <h4>Grade Calculator</h4>
+            <input type="number" id="english" class="form-control" placeholder="English Marks">
+            <input type="number" id="math" class="form-control my-2" placeholder="Math Marks">
+            <input type="number" id="science" class="form-control my-2" placeholder="Science Marks">
+            <button class="btn btn-primary" onclick="calculateGrade()">Calculate</button>
+            <p id="gradeResult"></p>
+        </div>
+        
+        <!-- Area Calculator -->
+        <div class="mb-4">
+            <h4>Area Calculator</h4>
+            <input type="number" id="radius" class="form-control" placeholder="Radius of Circle">
+            <button class="btn btn-primary my-2" onclick="calculateCircleArea()">Calculate Circle Area</button>
+            <p id="circleArea"></p>
+            
+            <input type="number" id="length" class="form-control mt-3" placeholder="Length of Rectangle">
+            <input type="number" id="width" class="form-control my-2" placeholder="Width of Rectangle">
+            <button class="btn btn-primary" onclick="calculateRectangleArea()">Calculate Rectangle Area</button>
+            <p id="rectangleArea"></p>
+        </div>
+    </div>
+
+    <script>
+        function convertCurrency() {
+            let amount = document.getElementById("currencyInput").value;
+            let type = document.getElementById("currencyType").value;
+            let result = (type === "USD") ? (amount * 83.5) : (amount / 83.5);
+            document.getElementById("currencyResult").innerText = "Converted Amount: " + result.toFixed(2);
+        }
+        
+        function convertTemperature() {
+            let temp = document.getElementById("tempInput").value;
+            let type = document.getElementById("tempType").value;
+            let result = (type === "C") ? (temp * 9/5 + 32) : ((temp - 32) * 5/9);
+            document.getElementById("tempResult").innerText = "Converted Temperature: " + result.toFixed(2);
+        }
+        
+        function calculateInterest() {
+            let p = document.getElementById("principal").value;
+            let t = document.getElementById("time").value;
+            let r = document.getElementById("rate").value;
+            let interest = (p * t * r) / 100;
+            let total = parseFloat(p) + interest;
+            document.getElementById("interestResult").innerText = `Interest: ${interest.toFixed(2)}, Total Amount: ${total.toFixed(2)}`;
+        }
+        
+        function calculateGrade() {
+            let e = document.getElementById("english").value;
+            let m = document.getElementById("math").value;
+            let s = document.getElementById("science").value;
+            let total = parseFloat(e) + parseFloat(m) + parseFloat(s);
+            let avg = total / 3;
+            let grade = avg >= 80 ? "A" : avg >= 60 ? "B" : avg >= 40 ? "C" : "Failed";
+            document.getElementById("gradeResult").innerText = `Total: ${total}, Average: ${avg.toFixed(2)}, Grade: ${grade}`;
+        }
+        
+        function calculateCircleArea() {
+            let radius = document.getElementById("radius").value;
+            let area = Math.PI * radius * radius;
+            document.getElementById("circleArea").innerText = "Area of Circle: " + area.toFixed(2);
+        }
+        
+        function calculateRectangleArea() {
+            let length = document.getElementById("length").value;
+            let width = document.getElementById("width").value;
+            let area = length * width;
+            document.getElementById("rectangleArea").innerText = "Area of Rectangle: " + area.toFixed(2);
+        }
+    </script>
+</body>
+</html>

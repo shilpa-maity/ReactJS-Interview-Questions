@@ -1,0 +1,89 @@
+{
+  "tasks": [
+    {
+      "id": "b297",
+      "task_title": "Lorem ipsum",
+      "task_desc": "Hello world lorem ipsum",
+      "user_id": "2edf",
+      "created": "19-7-2025"
+    },
+    {
+      "id": "9d54",
+      "task_title": "Lorem ipsum2",
+      "task_desc": "Hello world lorem ipsum2",
+      "user_id": "2edf",
+      "created": "19-7-2025"
+    },
+    {
+      "id": "52a0",
+      "task_title": "Lorem ipsum3",
+      "task_desc": "Hello world lorem ipsum3",
+      "user_id": "2edf",
+      "created": "19-7-2025"
+    },
+    {
+      "id": "80b5",
+      "task_title": "Hello My self Apu ",
+      "task_desc": "Hello world",
+      "user_id": "aa96",
+      "created": "19-7-2025"
+    },
+    {
+      "id": "32d5",
+      "task_title": "Lorem ipsum",
+      "task_desc": "lorem ipsum2",
+      "user_id": "aa96",
+      "created": "19-7-2025"
+    },
+    {
+      "id": "fb97",
+      "task_title": "hello every one",
+      "task_desc": "Hii This is Subham Here ",
+      "user_id": "8807",
+      "created": "19-7-2025"
+    },
+    {
+      "id": "ea51",
+      "task_title": "hey this is Lina",
+      "task_desc": "Hello Myself Lina Here",
+      "user_id": "133b",
+      "created": "19-7-2025"
+    }
+  ],
+  "users": [
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "pass1": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2edf",
+      "name": "John Doe",
+      "email": "john.doe@gmail.com",
+      "pass1": "j123",
+      "role": "regular"
+    },
+    {
+      "id": "aa96",
+      "name": "Apu Garain",
+      "email": "apu@yahoo.com",
+      "pass1": "apu123",
+      "role": "regular"
+    },
+    {
+      "id": "8807",
+      "name": "Subham Kundu",
+      "email": "subham@gmail.com",
+      "pass1": "subham123",
+      "role": "regular"
+    },
+    {
+      "id": "133b",
+      "name": "Lina Das",
+      "email": "lina@yahoo.com",
+      "pass1": "lina123",
+      "role": "regular"
+    }
+  ]
+}

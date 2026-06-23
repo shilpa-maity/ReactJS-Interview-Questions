@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+    //1. var s = "eLEphAnt"
+    // find out no of vowels and consonents from the word using  find ,filter,map built in function.
+    var s = "eLEphAnt";
+    s=s.toLowerCase(); // Convert to lowercase for uniformity
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+    var consonants = [];
+    var vowelCount = 0;
+    var consonantCount = 0;
+    var vowelArray = s.split('').filter(function(char) {
+        return vowels.includes(char);
+    });
+    var consonantArray = s.split('').filter(function(char) {
+        return !vowels.includes(char) && char.match(/[a-z]/i); // Check if it's a letter
+    });
+    vowelCount = vowelArray.length;
+    consonantCount = consonantArray.length;
+    console.log("Number of vowels: " + vowelCount);
+    console.log("Number of consonants: " + consonantCount);
+    console.log("Vowels: " + vowelArray.join(', '));
+    console.log("Consonants: " + consonantArray.join(', '));
+
+    //2. var x = [-1,2,-3,-4,6,211,121,51];
+         //i) store all negative values into an array
+         //ii)store all prime nos into a separate array
+         //iii) find out highest and lowest prime no.
+         //iv) Sum of all array elements
+         //v)Average of all array elements.
+         //vi) Convert entire array values into positive value.
+    
+         var x = [-1, 2, -3, -4, 6, 211, 121, 51];
+    //i) Store all negative values into an array
+    var negativeValues = x.filter(function(num) {
+        return num < 0;
+    });
+    console.log("Negative values: " + negativeValues.join(', '));
+
+    //ii) Store all prime numbers into a separate array
+    function isPrime(num) {
+        if (num <= 1) return false;
+        for (var i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    }
+    var primeNumbers = x.filter(function(num) {
+        return isPrime(num);
+    });
+    console.log("Prime numbers: " + primeNumbers.join(', '));
+
+    //iii) Find out highest and lowest prime number
+    var highestPrime = Math.max(...primeNumbers);
+    var lowestPrime = Math.min(...primeNumbers);
+    console.log("Highest prime number: " + highestPrime);
+    console.log("Lowest prime number: " + lowestPrime);
+    
+
+
+
+
+
+   
+
+
+        </script>
+<body>
+  //1. var s = "eLEphAnt"
+        // find out no of vowels and consonents from the word using built in function.
+
+    
+      //2. var x = [-1,2,-3,-4,6,211,121,51];
+         //i) store all negative values into an array
+         //ii)store all prime nos into a separate array
+         //iii) find out highest and lowest prime no.
+         //iv) Sum of all array elements
+         //v)Average of all array elements.
+         //vi) Convert entire array values into positive value.
+  
+</body>
+</html>

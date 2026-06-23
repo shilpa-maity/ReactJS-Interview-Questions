@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script type="text/javascript">
+  // document.write("Hello");
+               //0   1  2  3  4
+  var numbers = [11,22,33,"abc",55,true,"aaa",121,344,"false"];
+  //console.log(numbers[0]); //?
+  console.log("actual array",numbers,"Size  of the array is :",numbers.length);
+  //add new element
+  numbers.push(121);
+  console.log(numbers);
+  console.log("Size of the array is :"+numbers.length);
+  numbers.pop(); //remove last element
+  console.log("Actual array",numbers,"Size",numbers.length);
+  
+  
+  //accessing all elements of the array using for loop.
+  for(var i=0;i<numbers.length;i++){
+   console.log(numbers[i], "Object Type=>"+typeof(numbers[i]));
+  }
+  console.log("Size of the array :",numbers.length);
+  
+  //console.log("Array ",numbers);
+
+  //FAQ: Reverse an array
+  console.log("Reverse of an array");
+  for(var i=numbers.length-1;i>=0;i--){
+    console.log(numbers[i]);
+  }
+  //Find Out all number Field Objects from the array.
+ console.log("Find Out all number Field Objects from the array.");
+  for(var i=0;i<numbers.length;i++){
+   //   if(typeof(numbers[i])=='number'){
+   //     console.log(numbers[i]);
+   //   }
+     if(!isNaN(numbers[i])){
+       console.log(numbers[i]);
+     }
+  }
+
+  //numbers =[11,22,45,67,'e','m','n','a'];
+  //Count no of odd nos.
+  //Count no of Even nos.
+  //count no of Vowels.
+  //count no of consonents.
+  //Eliminate all string data create a numeric array and find out max & min .
+  //Sum of all numeric elements
+  //average of all numeric elements.
+  
+
+  </script>
+<body>
+  
+</body>
+</html>

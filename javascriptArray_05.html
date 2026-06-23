@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script type="text/javascript">
+           //var user = {"id":1001,"name":"Apu","e-mail":"apu@yahoo.com"};
+           //fetch all keys from the array.
+           //fetch all values from the array.
+           //how to fetch all keys froma  single object.
+           //console.log("detecting all keys");
+           //for(let a of  Object.keys(user)){
+                  //console.log(a);
+             //}
+             //console.log("displaying values");
+             //for(let a of  Object.values(user)){
+                  //console.log(a);
+             //}
+
+
+             //1.WAP check a String whether it is Palindrome or Not.
+              var str = "madam";
+              var isPalindrome = true;
+                 for(let i = 0; i < str.length / 2; i++){
+                      if(str[i] !== str[str.length - 1 - i]){
+                           isPalindrome = false;
+                           break;
+                      }
+                 }
+                     if(isPalindrome){
+                         console.log(str + " is a Palindrome.");
+                     } else {
+                         console.log(str + " is not a Palindrome.");
+                     }
+          //2.WAP calculate length of the string without using length property.
+          var str = "Hello World";
+          var count = 0;
+          for(let i = 0; str[i] !== undefined; i++){
+               count++;
+          }
+          console.log("Length of the string is: " + count);
+          //3.Suppose user has entered a string Apu Garain
+          //Output should be Hello A.Garain
+          //user has entered Shilpa Maity
+          //Hello S.Maity
+
+
+
+
+              
+      </script>
+</body>
+</html>
+
+
+

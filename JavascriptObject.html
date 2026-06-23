@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i;
+        for( i=0;i<=10;i++){
+            console.log(i);
+        }
+        console.log("Exit value:",i);
+
+        // var arr=[12,16,14,15,16];
+        // for(var i=0;i<=arr.length;i++){
+        //     console.log(arr[i]);
+        // }
+
+        // var obj={
+        //     name:"John",
+        //     age:"27",
+        //     loc:'Kolkata'
+        // }
+
+
+
+        var arr3=[
+        {
+            name:"John",
+            age:"27",
+            loc:'Kolkata'
+        },
+        {
+            name:"Maria",
+            age:"25",
+            loc:'USA'
+        },
+        {
+            name:"Johnson",
+            age:"28",
+            loc:'Kolkata'
+        },
+        {
+            name:"Diana",
+            age:"27",
+            loc:'Delhi'
+        },{
+            name:"Rock",
+            age:"24",
+            loc:'Kolkata'
+        }
+
+        ]
+        // console.log(arr3[0]);
+        //for(var i=0;i<arr3.length;i++){
+            // console.log(arr3[i].name);
+            // if(arr3[i].name.startsWith('J')){
+            //     console.log(arr3[i]);
+            // }
+            // if(arr3[i].name.includes('i')){
+            //     console.log(arr3[i]);
+            // }
+           // if(arr3[i].age>25){
+                //console.log(arr3[i]);
+           // }
+        //}
+
+
+        // Create a array of object of students with contains(id,name,age,phone,email)
+        //   You have to implimant the startswith and includs fucntion
+        // You have to chech the length of every phone number is it 10 or not?
+        var arr4=[
+        {   id:'01',
+            name:"John",
+            age:"27",
+            phone:'9876543210',
+            email:'john@gmail.com'},
+        {
+          id:'02',
+          name:"Ram",
+          age:"28",
+          phone:'9876556210',
+          email:'ram@gmail.com'
+        },
+        {
+          id:'03',
+          name:"Sam",
+          age:"29",
+          phone:'9876546780',
+          email:'sam@gmail.com'
+        },
+        {
+          id:'04',
+          name:"Sita",
+          age:"30",
+          phone:'9876546745',
+          email:'sita@gmail.com'
+        },{
+          id:'05',
+          name:"Gita",
+          age:"31",
+          phone:'6296546780',
+          email:'gita@gmail.com'
+        }]
+        for(var i=0;i<arr4.length;i++){
+          console.log(arr4[i].name);
+          //if(arr4[i].name.startsWith('J')){
+               //console.log(arr4[i]);
+           //}
+           //if(arr4[i].name.includes('a')){
+               //console.log(arr4[i]);
+           }
+          if(arr4[i].phone.length==10){
+
+              console.log(arr4[i]);
+          }
+      
+
+      
+    </script>
+</body>
+</html>

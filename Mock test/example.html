@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicines List</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    img {
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Medicines List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Medicine ID</th>
+        <th>Medicine Name</th>
+        <th>Composition</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Image</th>
+        <th>Entry Date</th>
+      </tr>
+    </thead>
+    <tbody id="medicineTableBody">
+      
+    </tbody>
+  </table>
+
+  <script>
+    const apiUrl = 'https://medicinerestapi2.glitch.me/api/medicines/all';
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const tableBody = document.getElementById('medicineTableBody');
+        data.forEach(medicine => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${medicine.medicine_id}</td>
+            <td>${medicine.medicine_name}</td>
+            <td>${medicine.medicine_comp}</td>
+            <td>${medicine.medicine_price}</td>
+            <td>${medicine.medicine_qty}</td>
+            <td><img src="${medicine.medicine_image}" alt="${medicine.medicine_name}"></td>
+            <td>${new Date(medicine.medicine_entry_date).toLocaleDateString()}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => console.error('Error fetching medicines:', error));
+  </script>
+</body>
+</html>

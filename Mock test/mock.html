@@ -1,0 +1,85 @@
+<!-- Q1. Write a function using arrow syntax to check if a
+given string is a palindrome.
+Input: "level"
+Output: true -->
+<!-- <script>
+const isPalindrome = (str) => {
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+};
+// Example usage
+console.log(isPalindrome("level")); // Output: true
+</script> -->
+
+
+
+<!-- Q2. Use filter() and map() to return squares of
+all odd numbers from a given array.
+Input: [1, 2, 3, 4, 5]
+Output: [1, 9, 25] --> 
+<!-- <script>
+const getOddSquares = (arr) => {
+  return arr.filter(num => num % 2 !== 0).map(num => num * num);
+};
+console.log(getOddSquares([1, 2, 3, 4, 5])); // Output: [1, 9, 25]
+</script> -->
+
+
+
+<!-- Q3. Write a function using arrow syntax to check if a
+number is prime.
+Input: 7
+Output: true -->
+<!-- <script>
+const isPrime = (num) => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+};
+console.log(isPrime(7)); // Output: true
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>map() Example</title>
+</head>
+<body>
+  <script>
+    const numbers = [1, 2, 3, 4, 5];
+    const squaredNumbers = numbers.map(num => num * num);
+    console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+  </script>
+</body>
+</html> -->
+
+<!-- <script>
+const numbers = [5, 12, 8, 130, 44];
+const filteredNumbers = numbers.filter(function(number) {
+  return number > 10;
+});
+console.log(filteredNumbers);
+// Output: [12, 130, 44]
+</script> -->
+<!-- <script>
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(function(accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0);
+console.log(sum);
+// Output: 15
+</script> -->
+
+
+<!-- <script>
+const strings = ["Hello", "World", "JS"];
+const concatenatedString = strings.reduce((accumulator, currentValue) => {
+  return accumulator + '-' + currentValue;
+});
+console.log(concatenatedString);
+// Output: "Hello-World-JS"
+</script> -->

@@ -1,0 +1,129 @@
+/* === Global Styling === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Full black background */
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* === Auth Page Layout === */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* === Card Container for Login/Welcome === */
+.auth-container {
+  background-color: #121212; /* Dark gray card */
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+}
+
+/* === Headings === */
+.auth-container h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* === Input Fields === */
+.auth-container label {
+  font-weight: 600;
+  color: #eeeeee;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.auth-container .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-container .form-control:focus {
+  border-color: #00aaff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.3);
+}
+
+/* === Error Field === */
+.auth-container .input-error {
+  border-color: #ff4d4d;
+  background-color: #2a0000;
+}
+
+.auth-container .text-danger {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* === Buttons === */
+.button {
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-primary {
+  background-color: #00aaff;
+  color: #000;
+  margin-top: 8px;
+}
+
+.button-primary:hover {
+  background-color: #0088cc;
+}
+
+.button-danger {
+  background-color: #ff4d4d;
+  color: #fff;
+  margin-top: 16px;
+}
+
+.button-danger:hover {
+  background-color: #cc0000;
+}
+
+/* === Welcome Page === */
+.welcome-page {
+  background-color: #121212;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 480px;
+  margin: 100px auto;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
+.welcome-page h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.welcome-page p {
+  color: #bbbbbb;
+  margin-top: 8px;
+  font-size: 16px;
+}

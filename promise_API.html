@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script type="text/javascript">
+           //create an Promise Object
+            const myPromise = new Promise((resolve,reject)=>{
+                let isValid = true;//boolean
+
+                if(isValid){
+                    resolve("Block gets executed");
+                    resolve("Done");
+                } 
+                else reject("Error Occured");
+            });
+           //calling the created Promise.
+              myPromise
+              .then((str)=>{
+                console.log(str);
+              })
+              .then((str2)=>{
+                console.log(str2);
+              })
+              .catch((error)=>{
+                console.log(error);
+              })
+              .finally(()=>{
+                console.log("Promise is working");
+              });
+          //Promise is an Unicast Object .
+          //it can have only one value to be send at the same time.
+          
+           
+      </script>
+</body>
+</html>

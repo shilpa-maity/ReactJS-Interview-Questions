@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function abc(){
+            alert("Hello world");
+            // document.querySelector("p").style.backgroundColor='red';
+            // document.querySelector("p").style.color='#fff';
+            // document.querySelector("p").style.height='200px';
+            // document.querySelector("p").style.width='200px';
+            // document.querySelector("p").style.border='1px solid #000';
+            document.getElementById("p1").style.backgroundColor=
+            document.getElementById("p2").style.backgroundColor='red';
+            var x =10;
+            var y = 20;
+            var z = x+y;
+            var z1= x-y;
+            var z2=x*y;
+            var z3=x/y;
+            console.log("sum="+z) ;
+            console.log("sub="+z1);
+            console.log("multiply="+z2);
+            console.log("division="+z3);
+            //Multiply
+            //division
+            //remainder
+            //average of 2 nos.
+            document.getElementById("d1").innerHTML="<p style='color:green;font-weight:bold;'>Sum="+z+" Sub="+z1+" multiply="+z2+" division="+z3+"</p>";     
+        }
+    </script>
+</head>
+<body>
+       <p id="p1">This is Para1</p>
+       <p id="p2">This is Para2</p>
+       <button onclick="abc()">Click Me</button>
+       <div id="d1"><!--Output will come here innerHTML --></div>
+</body>
+</html>

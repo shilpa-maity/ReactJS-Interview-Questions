@@ -1,0 +1,88 @@
+<!-- Assignment: REST API Consumption with JavaScript
+API URL :
+https://api.restful-api.dev/objects
+REQUEST METHOD : GET
+Display all items in table structure .
+If any field is not provided in API then add N/A to that field into the existing table.
+Use Bootstrap-4 for Responsiveness. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REST API Consumption</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">API Data Table</h1>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Capacity</th>
+            <th>Price</th>
+            <th>Other Details</th>
+          </tr>
+        </thead>
+        <tbody id="data-table">
+          <!-- Data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const apiUrl = "https://api.restful-api.dev/objects";
+
+    async function fetchData() {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        const tableBody = document.getElementById('data-table');
+        data.forEach(item => {
+          const row = document.createElement('tr');
+
+          const id = item.id || 'N/A';
+          const name = item.name || 'N/A';
+          const color = item.data?.color || item.data?.Color || 'N/A';
+          const capacity = item.data?.capacity || item.data?.Capacity || item.data?.['capacity GB'] || 'N/A';
+          const price = item.data?.price || item.data?.Price || 'N/A';
+
+          let otherDetails = '';
+          if (item.data) {
+            for (const [key, value] of Object.entries(item.data)) {
+              if (!['color', 'Color', 'capacity', 'Capacity', 'capacity GB', 'price', 'Price'].includes(key)) {
+                otherDetails += `${key}: ${value}, `;
+              }
+            }
+            otherDetails = otherDetails.slice(0, -2); // Remove trailing comma and space
+          } else {
+            otherDetails = 'N/A';
+          }
+
+          row.innerHTML = `
+            <td>${id}</td>
+            <td>${name}</td>
+            <td>${color}</td>
+            <td>${capacity}</td>
+            <td>${price}</td>
+            <td>${otherDetails}</td>
+          `;
+
+          tableBody.appendChild(row);
+        });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Question 1 : 
+         // var user = {'id':1001,'name':'John','age':22,'e-mail':'a@a.com'};
+            // var user = {
+            //     id :1001,
+            //     name:'John',
+            //     age :22,
+            //     'e-mail':'a@a.com'
+            // } ;
+            // console.log(user,typeof(user));
+            // console.log(user['e-mail']);
+            //console.log(user['age']);
+
+
+            //Question 2 :
+            var users = [
+                {'id':1001,'name':'John','age':22,'e-mail':'j@j.com'},
+                {'id':1002,'name':'SMith','age':23,'e-mail':'s@s.com'},
+                {'id':1003,'name':'Joe','age':21,'e-mail':'y@y.com'}
+            ];
+            //It is an Compound Object single Object holds multiple objects under itself.
+            console.log(users,typeof(users),users.length);
+            //calculate total & average Age 
+            var totalAge =0;
+            for(var i=0;i<users.length;i++){
+                console.log(users[i]['e-mail']);
+                totalAge+=users[i].age;
+            }
+            console.log("Total Age is "+totalAge);
+            console.log("Average age is :"+(totalAge/users.length));
+    
+           for(var xyz of users){
+            console.log(xyz['e-mail']);
+           }
+
+           for(var index in users){
+            console.log(index);
+           }
+
+
+//Question 3: 
+//1.Display entire food list in console.
+//2.Display only biriyani items and calculate total & average price.
+//3.Calculate Gross total of all chicken related items .
+//4.Find Out maximum cost Item , min cost item.
+// 5.display those food items whose price is between 150-350.
+ var foodList = [
+  {'food_id':1001,'food':'Chicken Biriyani','price':200},
+  {'food_id':1002,'food':'Mutton Biriyani','price':350},
+  {'food_id':1003,'food':'Chilly Chicken','price':150},
+  {'food_id':1004,'food':'Paneer Masala','price':220},
+  {'food_id':1005,'food':'Chicken Lollypop','price':120}
+];
+console.log(foodList,typeof(foodList),foodList.length);
+//1.Display entire food list in console.
+for(var i=0;i<foodList.length;i++){
+    console.log(foodList[i]);
+}
+//2.Display only biriyani items and calculate total & average price.
+var totalPrice =0;
+var biriyaniCount =0;
+for(var i=0;i<foodList.length;i++){
+    if(foodList[i]['food'].includes('Biriyani')){
+        console.log(foodList[i]);
+        totalPrice+=foodList[i].price;
+        biriyaniCount++;
+    }
+}
+console.log("Total Price of Biriyani is "+totalPrice);
+console.log("Average Price of Biriyani is "+(totalPrice/biriyaniCount));
+//3.Calculate Gross total of all chicken related items .
+var grossTotal =0;
+for(var i=0;i<foodList.length;i++){
+    if(foodList[i]['food'].includes('Chicken')){
+        console.log(foodList[i]);
+        grossTotal+=foodList[i].price;
+    }
+}
+console.log("Gross Total of Chicken related items is "+grossTotal);
+//4.Find Out maximum cost Item , minimum  cost item.
+var maxCost = foodList[0].price;
+var minCost = foodList[0].price;
+var maxCostItem = foodList[0].food;
+var minCostItem = foodList[0].food;
+for(var i=0;i<foodList.length;i++){
+    if(foodList[i].price>maxCost){
+        maxCost = foodList[i].price;
+        maxCostItem = foodList[i].food;
+    }
+    if(foodList[i].price<minCost){
+        minCost = foodList[i].price;
+        minCostItem = foodList[i].food;
+    }
+}
+console.log("Maximum Cost Item is "+maxCostItem+" with price "+maxCost);
+console.log("Minimum Cost Item is "+minCostItem+" with price "+minCost);
+//5.display those food items whose price is between 150-350.
+for(var i=0;i<foodList.length;i++){
+    if(foodList[i].price>=150 && foodList[i].price<=350){
+        console.log(foodList[i]);
+    }
+}
+
+
+
+  
+    </script>
+</body>
+</html>

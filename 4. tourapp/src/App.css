@@ -1,0 +1,91 @@
+/* App.css */
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f0f2f5);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 100%;
+  padding: 20px 5%;
+}
+
+/* Typography */
+h1, h2, h4 {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Alerts (for Tour Packages) */
+.alert {
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.alert:hover {
+  transform: scale(1.02);
+  opacity: 0.97;
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Section Spacing */
+section {
+  width: 100%;
+  display: flex;
+  
+  margin-bottom: 2rem;
+}
+
+
+/* Centered Header */
+.text-center {
+  text-align: center;
+}
+
+/* Full Width Layout */
+.full-width {
+  width: 100%;
+}

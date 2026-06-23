@@ -1,0 +1,108 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff5cc;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px -5px #ffcccb;
+  color: #ff9f9f;
+  font-family: 'Helvetica Neue', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px #ffb3b3;
+}
+
+.container h3 {
+  color: #ff7675;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.container .form-group {
+  margin-bottom: 20px;
+}
+
+.container .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff7675;
+  font-weight: 500;
+}
+
+.container .form-group input,
+.container .form-group select,
+.container .form-group textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ffd1d1;
+  border-radius: 12px;
+  background: #fffaf1;
+  color: #ff7675;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.container .form-group input:focus,
+.container .form-group select:focus,
+.container .form-group textarea:focus {
+  border-color: #ff9f9f;
+  box-shadow: 0 0 5px 3px #ffcccb;
+  background: #ffffff;
+}
+
+.container .form-group p.text-danger {
+  color: #ff4d4d;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.container .form-group button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background: #ff9f9f;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container .form-group button:hover {
+  background: #ff7675;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px -2px #ff9f9f;
+}
+
+.container table {
+  margin-top: 30px;
+  width: 100%;
+  background: #fffaf1;
+  color: #ff7675;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -5px #ffcccb;
+}
+
+.container table th,
+.container table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ffd1d1;
+}
+
+.container table tr:last-child td {
+  border-bottom: none;
+}
+
+.container table img {
+  border-radius: 50%;
+  box-shadow: 0 5px 10px -5px #ff9f9f;
+}
