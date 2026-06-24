@@ -20,7 +20,6 @@ Angular Course 12000 rs.
 PHP Course 11000 rs.
 
 If you need more information or have any other queries, feel free to mail us at admin@ejobindia.com or visit our website
-http://www.ejobindia.com
 
 `},
         {role:"user",content:`${message}`}
